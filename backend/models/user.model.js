@@ -26,9 +26,9 @@ module.exports = (sequelize, DataTypes) => {
     timestamps: false
   });
 
-  // ✅ Add associations here
+ 
   User.associate = (models) => {
-    User.hasMany(models.Store, { foreignKey: 'ownerId' }); // A user (owner) can have many stores
+    User.hasMany(models.Store, { foreignKey: 'ownerId' }); // A user can have many stores
     User.hasMany(models.Rating, { foreignKey: 'userId' }); // A user can give many ratings
   };
 
