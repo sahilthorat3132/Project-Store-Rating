@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './AdminUserListPage.css'; // ✅ Import CSS
+import './AdminUserListPage.css'; //  Import CSS
 
 function AdminUserListPage() {
   const token = localStorage.getItem("token");
@@ -29,12 +29,12 @@ function AdminUserListPage() {
       .catch(err => console.error(err));
   };
 
-  // Load users immediately on first render
+
   useEffect(() => {
     fetchUsers();
   }, []);
 
-  // Debounce filter/sort changes
+ 
   useEffect(() => {
     const delayDebounce = setTimeout(() => {
       fetchUsers();
