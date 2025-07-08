@@ -7,7 +7,7 @@ const AddStoreForm = () => {
         name: "",
         email: "",
         address: "",
-        ownerId: ""  // ✅ Changed from owner_id to ownerId
+        ownerId: ""  //  Changed  ID from owner_id to ownerId
     });
 
     const [owners, setOwners] = useState([]);
@@ -16,7 +16,7 @@ const AddStoreForm = () => {
 
     const token = localStorage.getItem("token");
 
-    // ✅ Fetch list of owners on component mount
+    //  Fetch list of owners on component 
     useEffect(() => {
         axios
             .get("http://localhost:5000/api/admin/users", {
@@ -95,7 +95,7 @@ const AddStoreForm = () => {
                         Select Owner
                     </option>
                     {owners
-                        .filter((owner) => owner.role !== "admin") // filter out admins
+                        .filter((owner) => owner.role !== "admin") // filtering  out admins
                         .map((owner) => (
                             <option key={owner.id} value={owner.id}>
                                 {owner.name}
