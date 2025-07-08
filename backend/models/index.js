@@ -31,17 +31,17 @@ db.User = require('./user.model')(sequelize, DataTypes);
 db.Store = require('./store.model')(sequelize, DataTypes);
 db.Rating = require('./rating.model')(sequelize, DataTypes);
 
-// Associations
 
-// 🔗 User and Rating (One-to-Many)
+
+//  User and Rating (One-to-Many)
 db.User.hasMany(db.Rating, { foreignKey: 'userId' });
 db.Rating.belongsTo(db.User, { foreignKey: 'userId' });
 
-// 🔗 Store and Rating (One-to-Many)
+//  Store and Rating (One-to-Many)
 db.Store.hasMany(db.Rating, { foreignKey: 'storeId' });
 db.Rating.belongsTo(db.Store, { foreignKey: 'storeId' });
 
-// 🔗 User and Store (One-to-Many, user is the owner)
+//  User and Store (One-to-Many, user is the owner)
 db.User.hasMany(db.Store, { foreignKey: 'ownerId' });
 db.Store.belongsTo(db.User, { foreignKey: 'ownerId' });
 
