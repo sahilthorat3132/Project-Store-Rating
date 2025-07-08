@@ -12,12 +12,12 @@ module.exports = (sequelize, DataTypes) => {
     userId: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      field: 'user_id'   // ✅ Maps to actual column name in DB
+      field: 'user_id'   //  Maps to actual column name in DB
     },
     storeId: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      field: 'store_id'  // ✅ Maps to actual column name in DB
+      field: 'store_id'  //  Maps to actual column name in DB
     },
     createdAt: {
       type: DataTypes.DATE,
@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     tableName: 'ratings',
-    timestamps: true // ✅ Enables createdAt/updatedAt
+    timestamps: true 
   });
 
   return Rating;
