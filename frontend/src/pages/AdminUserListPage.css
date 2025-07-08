@@ -1,0 +1,74 @@
+/* Container */
+.admin-user-list {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.admin-user-list h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+/* Filter Inputs */
+.admin-user-list input,
+.admin-user-list select {
+  padding: 10px;
+  margin: 10px 8px 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  min-width: 180px;
+}
+
+/* Table Styling */
+.admin-user-list table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.admin-user-list th,
+.admin-user-list td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.admin-user-list th {
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.admin-user-list th:hover {
+  background-color: #2980b9;
+}
+
+.admin-user-list tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Sort arrows */
+th::after {
+  content: '';
+  margin-left: 8px;
+}
+
+th.sorted-asc::after {
+  content: ' ▲';
+}
+
+th.sorted-desc::after {
+  content: ' ▼';
+}

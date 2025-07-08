@@ -1,0 +1,87 @@
+/* Navbar Wrapper */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0083b0;
+  padding: 15px 30px;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo Styling */
+.navbar-logo h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Links Section */
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Navigation Links */
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.navbar-links a:hover {
+  background-color: #00b4db;
+}
+
+/* User Info Wrapper (Welcome + Logout) */
+.navbar-user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 20px;
+}
+
+/* User Name Section with Icon */
+.user-name-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+}
+
+/* User Avatar Icon */
+.user-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: white;
+}
+
+/* Username Text */
+.navbar-username {
+  color: #f0f0f0;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* Logout Button */
+.logout-btn {
+  padding: 6px 12px;
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #e04e4e;
+}

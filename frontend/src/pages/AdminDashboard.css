@@ -1,0 +1,61 @@
+.admin-dashboard {
+  background-color: #f0f4f8;
+  min-height: 100vh;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+}
+
+.dashboard-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.dashboard-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px 40px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.dashboard-card:hover {
+  transform: scale(1.05);
+}
+
+.dashboard-card h2 {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.dashboard-card p {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.blue {
+  border-top: 5px solid #007bff;
+  color: #007bff;
+}
+
+.green {
+  border-top: 5px solid #28a745;
+  color: #28a745;
+}
+
+.purple {
+  border-top: 5px solid #6f42c1;
+  color: #6f42c1;
+}
