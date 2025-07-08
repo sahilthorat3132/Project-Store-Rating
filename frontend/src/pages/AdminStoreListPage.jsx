@@ -30,12 +30,12 @@ function AdminStoreListPage() {
   };
 
   useEffect(() => {
-    fetchStores(); // Initial load
+    fetchStores(); 
   }, []);
 
   useEffect(() => {
     const debounce = setTimeout(() => {
-      fetchStores(); // Fetch after filter/sort change
+      fetchStores(); // Fetch the data after filter
     }, 300);
 
     return () => clearTimeout(debounce);
