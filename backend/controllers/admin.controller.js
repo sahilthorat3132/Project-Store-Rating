@@ -7,7 +7,7 @@ const Rating = db.Rating;
 
 const dashboard = async (req, res) => {
   try {
-    console.log("Logged in admin:", req.user); // Add this for debugging
+    console.log("Logged in admin:", req.user); 
 
     const userCount = await User.count();
     console.log("userCount",userCount);
@@ -116,13 +116,13 @@ const createStore = async (req, res) => {
   try {
     const { name, email, address, ownerId } = req.body;
 
-    // 1. Check if the owner user exists
+    //  Check if the owner user exists
     const owner = await User.findByPk(ownerId);
     if (!owner) {
       return res.status(404).json({ message: "User not found." });
     }
 
-    // 2. Create the store and assign owner
+    // Create t store and assign owner
     const store = await Store.create({
       name,
       email,
@@ -130,7 +130,7 @@ const createStore = async (req, res) => {
       ownerId
     });
 
-    // 3. Update the user role to 'owner' (if not already)
+    //  Update the user role to 'owner' 
     if (owner.role !== 'owner') {
       owner.role = 'owner';
       await owner.save(); // Save changes to DB
@@ -144,7 +144,7 @@ const createStore = async (req, res) => {
 };
 
 
-//  Export them correctly
+//  Export them 
 module.exports = {
   dashboard,
   getUsers,
