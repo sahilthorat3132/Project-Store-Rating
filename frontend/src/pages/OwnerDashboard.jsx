@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './OwnerDashboard.css'; // Your custom styling
+import './OwnerDashboard.css'; //  custom styling
 
 function OwnerDashboard() {
   const token = localStorage.getItem('token');
@@ -11,7 +11,7 @@ function OwnerDashboard() {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then(res => {
-      console.log("API Response:", res.data); //  Debug here
+      console.log("API Response:", res.data); 
       setStoreRatingsData(res.data);
     })
     .catch(err => console.error(err));
@@ -37,7 +37,7 @@ function OwnerDashboard() {
           <p>No ratings yet.</p>
         ) : (
           storeRatingsData.map((store, index) => {
-            console.log("Store:", store); //  Proper placement
+            console.log("Store:", store);
             return (
               <div key={index} className="store-section">
                 <h4>{store.store}</h4>
