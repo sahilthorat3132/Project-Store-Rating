@@ -19,23 +19,23 @@ const AddUserForm = () => {
   const validate = () => {
     const newErrors = {};
 
-    // Name validation
+    // validation for name
     if (!formData.name || formData.name.length < 2 || formData.name.length > 60) {
       newErrors.name = "Name must be between 2 and 60 characters.";
     }
 
-    // Email validation
+    //  validation for Email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formData.email || !emailRegex.test(formData.email)) {
       newErrors.email = "Invalid email format.";
     }
 
-    // Address validation
+    //  validation for Address
     if (!formData.address || formData.address.length > 400) {
       newErrors.address = "Address must be under 400 characters.";
     }
 
-    // Password validation
+    // validation for Password 
     const passRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,16}$/;
     if (!formData.password || !passRegex.test(formData.password)) {
       newErrors.password = "Password must be 8–16 chars, with 1 uppercase & 1 special character.";
