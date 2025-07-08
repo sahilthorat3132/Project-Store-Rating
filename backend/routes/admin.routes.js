@@ -4,7 +4,7 @@ const adminController = require('../controllers/admin.controller');
 const auth = require('../middleware/auth.middleware');
 console.log("typeof auth:", typeof auth);
 
-// ✅ All admin routes use this pattern
+//All admin routes use this 
 router.get('/dashboard', auth(['admin']), adminController.dashboard);
 router.get('/users', auth(['admin']), adminController.getUsers);
 router.get('/stores', auth(['admin']), adminController.getStores);
