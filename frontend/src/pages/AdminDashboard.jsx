@@ -10,7 +10,7 @@ const AdminDashboard = () => {
   });
 
   const token = localStorage.getItem("token");
-  console.log("Auth Token:", token); // Debugging
+  console.log("Auth Token:", token); //  for Debugging
 
   useEffect(() => {
     if (!token) return;
@@ -20,7 +20,7 @@ const AdminDashboard = () => {
         headers: { Authorization: `Bearer ${token}` }
       })
       .then((res) => {
-        console.log("Dashboard data:", res.data); // Debugging
+        console.log("Dashboard data:", res.data); // for Debugging
         setSummary({
           users: res.data.userCount,
           stores: res.data.storeCount,
