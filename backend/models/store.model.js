@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
     ownerId: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      field: 'owner_id'  // ✅ Maps JS `ownerId` to DB column `owner_id`
+      field: 'owner_id'  
     }
   }, {
     timestamps: false
